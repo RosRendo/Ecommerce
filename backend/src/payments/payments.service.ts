@@ -7,8 +7,9 @@ export class PaymentsService {
   private stripe: Stripe;
 
   constructor(private prisma: PrismaService) {
-    this.stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_mock_key', {
-      apiVersion: '2026-03-25.acacia' as any,
+    const StripeClient = (Stripe as any).default || Stripe;
+    this.stripe = new StripeClient(process.env.STRIPE_SECRET_KEY || 'sk_test_mock_key', {
+      apiVersion: '2025-02-24.acacia' as any,
     });
   }
 

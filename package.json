@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:seed": "prisma db seed"
+    "db:seed": "prisma db seed",
+    "backend:dev": "npm --prefix backend run dev",
+    "backend:build": "npm --prefix backend run build"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
