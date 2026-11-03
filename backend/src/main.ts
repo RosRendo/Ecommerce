@@ -13,6 +13,8 @@ async function bootstrap() {
       process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
       'http://localhost:3000',
       'http://127.0.0.1:3000',
+      'https://ecommerce-red-one-29.vercel.app',
+      /.*\.vercel\.app$/,
     ],
     credentials: true,
   });

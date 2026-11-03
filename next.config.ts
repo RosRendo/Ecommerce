@@ -13,6 +13,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://ecommerce.dashboardkiller.online/api/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
